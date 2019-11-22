@@ -89,7 +89,7 @@ const getApiUser = async (msisdn, token) => {
 
   const options = {
     uri: `${config.API}/api/user/`,
-    method: 'PUT',
+    method: 'POST',
     headers: buildHeader('Bearer ' + token, sha256(hash), tId),
     body: data,
     json: true,
