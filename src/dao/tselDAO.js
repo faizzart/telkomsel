@@ -148,7 +148,7 @@ const getJwtToken = async (msisdn, code) => {
 };
 const buyPackage = async (signtrans, token, offerid) => {
   //const newMsisdn = msisdn.replace('+', '');
-  let data = { toBeSubscribedTo: false, paymentMethod: 'AIRTIME' };
+  let data = { toBeSubscribedTo: false, paymentMethod: 'POST' };
   const tId = 'A3011' + moment().format('YYMMDDHHmmssSSS') + '0000000';
   const hash = `${tId}offers/v2/${offerid}4.5.0t5elas914adlad00131415`;
 
