@@ -25,7 +25,7 @@ const getRoute = async (token, route, query = false) => {
   const hash = `${tId}${route}4.5.0t5elas914adlad00131415`;
   const options = {
     uri: `${config.API}/api/${route}${query ? query : ''}`,
-    method: 'GET',
+    method: 'POST',
     headers: buildHeader(token, sha256(hash), tId),
     json: true,
     resolveWithFullResponse: true
@@ -89,7 +89,7 @@ const getApiUser = async (msisdn, token) => {
 
   const options = {
     uri: `${config.API}/api/user/`,
-    method: 'POST',
+    metod: 'PUT',
     headers: buildHeader('Bearer ' + token, sha256(hash), tId),
     body: data,
     json: true,
