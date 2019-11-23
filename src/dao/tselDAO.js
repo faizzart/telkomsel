@@ -25,7 +25,7 @@ const getRoute = async (token, route, query = false) => {
   const hash = `${tId}${route}4.5.0t5elas914adlad00131415`;
   const options = {
     uri: `${config.API}/api/${route}${query ? query : ''}`,
-    method: 'POST',
+    method: 'GET',
     headers: buildHeader(token, sha256(hash), tId),
     json: true,
     resolveWithFullResponse: true
